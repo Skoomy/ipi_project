@@ -1,0 +1,9 @@
+clear;
+./creeCycleRef ref1.txt $2 01 01 M 10 39 18 15 11 1 1 1 1 1 12 3 5 1 1 1 17 1 1
+./creeCycleRef ref2.txt $2 01 01 M 12 39 1 1 17 15 12 1 12 3 1 1 5 1 20 1 1 1 1 2 1 10 5 3
+./genereCycle2 ref2.txt $2 $3 $4 0 0 0 $5 $6 $7 0 0 0 $8 ref2.01 
+./genereCycle2 ref1.txt $2 $3 $4 0 0 0 $5 $6 $7 0 0 0 $8 ref1.01 
+#./alignCycles `cat ref1.01` `cat ref2.01` n
+#./alignCycles `cat ref2.01`  `cat ref1.01` n
+./alignCycles `cat ref1.01` `cat ref2.01` p
+./alignCycles `cat ref2.01`  `cat ref1.01` p
